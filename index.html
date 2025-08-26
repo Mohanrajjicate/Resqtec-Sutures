@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -44,18 +44,567 @@
 <script type="importmap">
 {
   "imports": {
-    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.8.2",
     "react/": "https://aistudiocdn.com/react@^19.1.1/",
     "react": "https://aistudiocdn.com/react@^19.1.1",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
-    "@google/genai": "https://esm.run/@google/genai"
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.15.0",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.8.2"
   }
 }
 </script>
 <link rel="stylesheet" href="/index.css">
 </head>
-<body>
-  <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
+<body class="bg-white font-lato text-resqtec-text">
+  <header class="bg-white shadow-md sticky top-0 z-50">
+      <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="#home" class="text-2xl font-montserrat font-bold text-resqtec-blue">
+          Resqtec Sutures
+        </a>
+        <nav class="hidden md:flex items-center space-x-8">
+          <a data-navlink="home" href="#home" class="font-semibold font-montserrat transition-colors duration-300 text-resqtec-accent">Home</a>
+          <a data-navlink="about" href="#about" class="font-semibold font-montserrat transition-colors duration-300 text-resqtec-blue hover:text-resqtec-accent">About Us</a>
+          <a data-navlink="products" href="#products" class="font-semibold font-montserrat transition-colors duration-300 text-resqtec-blue hover:text-resqtec-accent">Our Products</a>
+          <a data-navlink="contact" href="#contact" class="font-semibold font-montserrat transition-colors duration-300 text-resqtec-blue hover:text-resqtec-accent">Contact Us</a>
+        </nav>
+        <a href="#contact" class="hidden md:inline-block bg-resqtec-accent text-white font-montserrat font-semibold py-2 px-6 rounded-lg shadow-sm hover:bg-opacity-90 transition-all duration-300">
+          Become a Distributor
+        </a>
+      </div>
+  </header>
+  
+  <main>
+    <section id="home">
+      <div class="relative bg-resqtec-blue text-white py-20 md:py-32">
+        <div class="absolute inset-0">
+          <img src="https://picsum.photos/seed/lab/1920/1080" alt="Clean laboratory environment" class="w-full h-full object-cover opacity-20"/>
+        </div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+          <h1 class="text-4xl md:text-6xl font-montserrat font-bold leading-tight mb-4">Advancing Surgical Healing with Unmatched Precision</h1>
+          <p class="text-lg md:text-xl font-lato mb-8 max-w-3xl mx-auto">Manufacturing world-class surgical sutures that surgeons trust and patients deserve.</p>
+          <div class="space-x-4">
+            <a href="#products" class="inline-block bg-resqtec-accent text-white font-montserrat font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-opacity-90 transition-all duration-300">
+              Explore Our Products
+            </a>
+            <a href="#contact" class="inline-block bg-white text-resqtec-blue font-montserrat font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-gray-200 transition-all duration-300">
+              Distributor Inquiry
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="py-16 bg-white">
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-3xl md:text-4xl font-montserrat font-bold text-resqtec-blue mb-12">A Comprehensive Portfolio for Every Surgical Need</h2>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="p-8 border border-gray-200 rounded-lg shadow-sm">
+              <h3 class="text-xl font-montserrat font-semibold text-resqtec-blue mb-2">Absorbable Sutures</h3>
+              <p class="text-gray-600">Predictable absorption and excellent tissue support for internal wound closure.</p>
+            </div>
+            <div class="p-8 border border-gray-200 rounded-lg shadow-sm">
+              <h3 class="text-xl font-montserrat font-semibold text-resqtec-blue mb-2">Non-Absorbable Sutures</h3>
+              <p class="text-gray-600">Superior tensile strength and reliability for long-term tissue approximation.</p>
+            </div>
+            <div class="p-8 border border-gray-200 rounded-lg shadow-sm">
+              <h3 class="text-xl font-montserrat font-semibold text-resqtec-blue mb-2">Specialty Sutures</h3>
+              <p class="text-gray-600">Innovative solutions designed for cardiovascular, ophthalmic, and cosmetic surgery.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="py-16 bg-resqtec-gray">
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-3xl md:text-4xl font-montserrat font-bold text-resqtec-blue mb-12">The Hallmark of Quality and Trust</h2>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+            <div class="flex flex-col items-center">
+              <div class="bg-resqtec-accent text-white rounded-full p-4 mb-4">
+                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-montserrat font-semibold text-resqtec-blue mb-2">Global Quality Standards</h3>
+              <p class="text-gray-600">ISO 13485:2016 and CE certified manufacturing for guaranteed safety and performance.</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <div class="bg-resqtec-accent text-white rounded-full p-4 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-montserrat font-semibold text-resqtec-blue mb-2">Advanced Manufacturing</h3>
+              <p class="text-gray-600">Utilizing state-of-the-art technology in Class 10,000 cleanrooms.</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <div class="bg-resqtec-accent text-white rounded-full p-4 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-montserrat font-semibold text-resqtec-blue mb-2">Superior Raw Materials</h3>
+              <p class="text-gray-600">Sourcing only the highest-grade materials for exceptional strength and biocompatibility.</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <div class="bg-resqtec-accent text-white rounded-full p-4 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-montserrat font-semibold text-resqtec-blue mb-2">Surgeon-Centric Design</h3>
+              <p class="text-gray-600">Engineered for optimal handling, knot security, and minimal tissue drag.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="py-16 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl text-center">
+          <blockquote class="text-xl md:text-2xl italic text-resqtec-text mb-4">
+            "The consistency and performance of Resqtec sutures are remarkable. Their Resqpro sutures provide the smooth passage and knot security I demand in complex cardiovascular procedures."
+          </blockquote>
+          <cite class="font-montserrat font-semibold text-resqtec-accent not-italic">- Dr. Priya Sharma, Chief Cardiothoracic Surgeon, Apollo Hospitals (Fictional)</cite>
+        </div>
+      </div>
+
+      <div class="py-16 bg-resqtec-gray">
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-3xl md:text-4xl font-montserrat font-bold text-resqtec-blue mb-4">Partner with a Leader in Surgical Innovation</h2>
+          <p class="text-lg text-gray-700 mb-8">Join our growing network of global distributors or contact us for your hospital's requirements.</p>
+          <a href="#contact" class="inline-block bg-resqtec-accent text-white font-montserrat font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-opacity-90 transition-all duration-300 text-lg">
+            Contact Us Now
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="pt-24 -mt-16">
+       <div class="bg-white">
+          <div class="bg-resqtec-gray py-12">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-5xl font-montserrat font-bold text-resqtec-blue">Pioneering the Future of Wound Closure</h1>
+            </div>
+          </div>
+          
+          <div class="container mx-auto px-6 py-16">
+            <div class="mb-16">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-montserrat font-bold text-resqtec-blue mb-4">Our Story</h2>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Founded in 2015, Resqtec Sutures Pvt Ltd was born from a vision to provide Indian and global healthcare markets with surgical sutures that meet the highest international standards of quality and affordability. Our journey began with a dedicated team of biomedical engineers and surgeons committed to closing the gap between excellence and accessibility in surgical care.
+                        </p>
+                    </div>
+                    <div class="flex justify-center">
+                        <img src="https://picsum.photos/seed/team/500/400" alt="Resqtec team" class="rounded-lg shadow-xl"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-16 bg-resqtec-blue text-white rounded-lg p-12">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-2xl font-montserrat font-bold mb-4">Our Mission</h3>
+                        <p class="text-gray-200 leading-relaxed">
+                            To empower surgeons and enhance patient outcomes by manufacturing and supplying a comprehensive range of technologically advanced, reliable, and sterile surgical sutures.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-montserrat font-bold mb-4">Our Vision</h3>
+                        <p class="text-gray-200 leading-relaxed">
+                            To be a globally recognized and trusted name in the field of wound closure technology, known for our unwavering commitment to quality, innovation, and customer satisfaction.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-16">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="flex justify-center md:order-2">
+                        <img src="https://picsum.photos/seed/factory/500/400" alt="State-of-the-art manufacturing facility" class="rounded-lg shadow-xl"/>
+                    </div>
+                    <div class="md:order-1">
+                        <h2 class="text-3xl font-montserrat font-bold text-resqtec-blue mb-4">Where Precision is Engineered</h2>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Our state-of-the-art manufacturing facility, located in the MedTech Park of Chennai, is the heart of our operations. It is equipped with automated machinery, stringent environmental controls, and Class 10,000 cleanrooms to ensure every suture is produced under the most sterile conditions. Our quality assurance protocols are integrated into every step of the manufacturing process, from raw material inspection to final product packaging and sterilization.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <h2 class="text-3xl font-montserrat font-bold text-resqtec-blue mb-8">Our Commitment, Certified.</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                    <div class="flex flex-col items-center justify-center p-4 bg-white border border-gray-200 rounded-lg shadow-sm text-center">
+                        <div class="w-16 h-16 bg-resqtec-accent rounded-full flex items-center justify-center text-white font-bold text-lg mb-2">ISO</div>
+                        <span class="font-montserrat font-semibold text-resqtec-blue">ISO 13485:2016</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center p-4 bg-white border border-gray-200 rounded-lg shadow-sm text-center">
+                        <div class="w-16 h-16 bg-resqtec-accent rounded-full flex items-center justify-center text-white font-bold text-lg mb-2">CE</div>
+                        <span class="font-montserrat font-semibold text-resqtec-blue">CE Mark</span>
+                    </div>
+                     <div class="flex flex-col items-center justify-center p-4 bg-white border border-gray-200 rounded-lg shadow-sm text-center">
+                        <div class="w-16 h-16 bg-resqtec-accent rounded-full flex items-center justify-center text-white font-bold text-lg mb-2">GMP</div>
+                        <span class="font-montserrat font-semibold text-resqtec-blue">WHO-GMP</span>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section id="products" class="pt-24 -mt-16">
+      <div class="bg-resqtec-gray">
+        <div class="container mx-auto px-6 py-12">
+          <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-montserrat font-bold text-resqtec-blue">Our Products</h1>
+            <p class="text-lg text-gray-700 mt-2 max-w-3xl mx-auto">Explore our extensive range of absorbable and non-absorbable surgical sutures, designed for performance and reliability across all surgical specialties.</p>
+          </div>
+
+          <div id="filters" class="flex justify-center mb-8 space-x-2 md:space-x-4">
+              <button data-filter="All" class="px-4 py-2 text-sm md:px-6 md:py-2 md:text-base font-montserrat font-semibold rounded-full transition-colors duration-300 bg-resqtec-accent text-white shadow-md">All</button>
+              <button data-filter="Absorbable Sutures" class="px-4 py-2 text-sm md:px-6 md:py-2 md:text-base font-montserrat font-semibold rounded-full transition-colors duration-300 bg-white text-resqtec-blue hover:bg-gray-200">Absorbable Sutures</button>
+              <button data-filter="Non-Absorbable Sutures" class="px-4 py-2 text-sm md:px-6 md:py-2 md:text-base font-montserrat font-semibold rounded-full transition-colors duration-300 bg-white text-resqtec-blue hover:bg-gray-200">Non-Absorbable Sutures</button>
+          </div>
+
+          <div id="product-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <!-- Product cards will be injected here by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="contact" class="pt-24 -mt-16">
+      <div class="bg-white">
+        <div class="container mx-auto px-6 py-16">
+          <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-montserrat font-bold text-resqtec-blue">Get In Touch</h1>
+            <p class="text-lg text-gray-700 mt-2 max-w-3xl mx-auto">
+              We are here to assist you. Whether you have a question about our products, want to become a distributor, or need support, please reach out to us.
+            </p>
+          </div>
+
+          <div class="grid lg:grid-cols-5 gap-12">
+            <div class="lg:col-span-3 bg-resqtec-gray p-8 rounded-lg shadow-sm">
+              <form id="contact-form" class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                  <input type="text" name="fullName" placeholder="Full Name*" required class="w-full p-3 border border-gray-300 rounded-md focus:ring-resqtec-accent focus:border-resqtec-accent"/>
+                  <input type="email" name="email" placeholder="Email Address*" required class="w-full p-3 border border-gray-300 rounded-md focus:ring-resqtec-accent focus:border-resqtec-accent"/>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                   <input type="tel" name="phone" placeholder="Phone Number" class="w-full p-3 border border-gray-300 rounded-md focus:ring-resqtec-accent focus:border-resqtec-accent"/>
+                   <input type="text" name="company" placeholder="Company / Hospital Name*" required class="w-full p-3 border border-gray-300 rounded-md focus:ring-resqtec-accent focus:border-resqtec-accent"/>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                  <input type="text" name="country" placeholder="Country*" required class="w-full p-3 border border-gray-300 rounded-md focus:ring-resqtec-accent focus:border-resqtec-accent"/>
+                  <select name="inquiryType" required class="w-full p-3 border border-gray-300 rounded-md bg-white focus:ring-resqtec-accent focus:border-resqtec-accent">
+                    <option>Product Inquiry</option>
+                    <option>Distributorship</option>
+                    <option>General Question</option>
+                  </select>
+                </div>
+                <div>
+                  <textarea name="message" placeholder="Your Message*" required rows="5" class="w-full p-3 border border-gray-300 rounded-md focus:ring-resqtec-accent focus:border-resqtec-accent"></textarea>
+                </div>
+                <div>
+                  <button type="submit" class="w-full bg-resqtec-accent text-white font-montserrat font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-opacity-90 transition-all duration-300">
+                    Submit Inquiry
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <div class="lg:col-span-2 space-y-8">
+              <div class="bg-resqtec-blue text-white p-8 rounded-lg shadow-sm">
+                  <h3 class="font-montserrat font-bold text-2xl mb-4">Contact Information</h3>
+                  <address class="not-italic space-y-4">
+                    <p>
+                      <strong>Address:</strong><br/>
+                      Plot 123, MedTech Park, Phase 2, Chennai, Tamil Nadu 600001, India.
+                    </p>
+                    <p>
+                      <strong>Sales Inquiries:</strong><br/>
+                      <a href="mailto:sales@resqtecsutures.com" class="hover:text-resqtec-accent">sales@resqtecsutures.com</a>
+                    </p>
+                    <p>
+                      <strong>General Information:</strong><br/>
+                      <a href="mailto:info@resqtecsutures.com" class="hover:text-resqtec-accent">info@resqtecsutures.com</a>
+                    </p>
+                    <p>
+                      <strong>Phone:</strong><br/>
+                      <a href="tel:+914412345678" class="hover:text-resqtec-accent">+91-44-1234-5678</a>
+                    </p>
+                  </address>
+              </div>
+              <div class="bg-resqtec-gray p-8 rounded-lg shadow-sm">
+                  <h3 class="font-montserrat font-bold text-2xl text-resqtec-blue mb-4">Our Global Reach</h3>
+                  <p class="text-gray-700">
+                      Resqtec Sutures are trusted by medical professionals in numerous countries. We are continuously expanding our distributor network. Connect with us to bring Resqtec's quality to your region.
+                  </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-16">
+              <h2 class="text-3xl font-montserrat font-bold text-resqtec-blue text-center mb-8">Our Location</h2>
+              <div class="aspect-w-16 aspect-h-9 bg-gray-300 rounded-lg shadow-md overflow-hidden">
+                  <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.026490332219!2d80.2069796153612!3d12.970119990856988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d5b94f132e3%3A0xfc6317761f308d33!2sChennai%2C%20Tamil%20Nadu%2C%20India!5e0!3m2!1sen!2sus!4v1678886400000!5m2!1sen!2sus"
+                      width="100%"
+                      height="450"
+                      style="border:0;"
+                      allowfullscreen=""
+                      loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade"
+                      title="Resqtec Sutures Location"
+                  ></iframe>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-resqtec-blue text-white">
+      <div class="container mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="space-y-4">
+            <h3 class="text-2xl font-montserrat font-bold">Resqtec Sutures</h3>
+            <p class="font-lato text-gray-300">"Precision in Every Stitch."</p>
+          </div>
+
+          <div>
+            <h4 class="font-montserrat font-semibold text-lg mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li><a href="#home" class="hover:text-resqtec-accent transition-colors">Home</a></li>
+              <li><a href="#about" class="hover:text-resqtec-accent transition-colors">About Us</a></li>
+              <li><a href="#products" class="hover:text-resqtec-accent transition-colors">Our Products</a></li>
+              <li><a href="#" class="hover:text-resqtec-accent transition-colors">Quality Policy</a></li>
+              <li><a href="#" class="hover:text-resqtec-accent transition-colors">Careers</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-montserrat font-semibold text-lg mb-4">Product Categories</h4>
+            <ul class="space-y-2">
+              <li><a href="#products" class="hover:text-resqtec-accent transition-colors">Absorbable Sutures</a></li>
+              <li><a href="#products" class="hover:text-resqtec-accent transition-colors">Non-Absorbable Sutures</a></li>
+              <li><a href="#" class="hover:text-resqtec-accent transition-colors">Specialty Sutures</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 class="font-montserrat font-semibold text-lg mb-4">Contact</h4>
+            <address class="not-italic space-y-2 text-gray-300">
+              <p>Resqtec Sutures Pvt Ltd<br />Plot 123, MedTech Park, Phase 2, Chennai, Tamil Nadu 600001, India.</p>
+              <p>Email: <a href="mailto:info@resqtecsutures.com" class="hover:text-resqtec-accent">info@resqtecsutures.com</a></p>
+              <p>Phone: <a href="tel:+914412345678" class="hover:text-resqtec-accent">+91-44-1234-5678</a></p>
+            </address>
+          </div>
+        </div>
+      </div>
+      <div class="bg-black bg-opacity-20">
+        <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+          <p>Copyright © 2025 Resqtec Sutures Pvt Ltd. All Rights Reserved.</p>
+          <div class="flex items-center space-x-4 mt-4 md:mt-0">
+            <a href="#" class="hover:text-white">Privacy Policy</a>
+            <span>|</span>
+            <a href="#" class="hover:text-white">Terms of Use</a>
+            <a href="#" class="hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" /></svg></a>
+          </div>
+        </div>
+      </div>
+  </footer>
+
+  <div id="product-modal" class="hidden fixed inset-0 bg-black bg-opacity-70 z-[60] flex justify-center items-center p-4" role="dialog" aria-modal="true" aria-labelledby="product-modal-title">
+    <div id="modal-content" class="bg-white rounded-lg shadow-2xl p-6 md:p-8 max-w-3xl w-full max-h-[90vh] overflow-y-auto relative animate-fade-in">
+        <button id="modal-close-button" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 transition-colors z-10" aria-label="Close modal">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        <div class="grid md:grid-cols-2 gap-8 items-start">
+          <img id="modal-image" src="" alt="" class="w-full h-auto rounded-md shadow-lg object-cover" />
+          <div class="space-y-4">
+            <h2 id="product-modal-title" class="text-3xl font-montserrat font-bold text-resqtec-blue"></h2>
+            <p id="modal-material" class="font-semibold text-resqtec-accent text-lg"></p>
+            <p id="modal-description" class="text-gray-700"></p>
+            <p id="modal-details" class="text-gray-600"></p>
+            <ul class="text-md space-y-2 text-gray-800 pt-4 border-t mt-4">
+              <li id="modal-absorption-item" class="hidden"><strong>Absorption Profile:</strong> <span id="modal-absorption"></span></li>
+              <li><strong>Color:</strong> <span id="modal-color"></span></li>
+              <li><strong>Available Sizes:</strong> <span id="modal-sizes"></span></li>
+            </ul>
+          </div>
+        </div>
+    </div>
+  </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  // --- PRODUCT DATA ---
+  const ProductCategory = {
+    Absorbable: 'Absorbable Sutures',
+    NonAbsorbable: 'Non-Absorbable Sutures',
+  };
+
+  const products = [
+      { category: ProductCategory.Absorbable, brandName: 'Resqsorb™', material: 'Polyglycolic Acid (PGA)', description: 'Braided and coated synthetic absorbable suture for general soft tissue approximation.', absorptionProfile: 'Complete absorption in 60-90 days.', color: 'Violet', sizes: 'USP 6-0 to 2', image: 'https://picsum.photos/seed/resqsorb/400/300', details: 'Resqsorb™ provides excellent tensile strength throughout the critical wound healing period. Its coating ensures smooth passage through tissue and precise knot placement. Ideal for subcutaneous tissue, fascia, and general surgery.' },
+      { category: ProductCategory.Absorbable, brandName: 'Resqcril™', material: 'Polyglactin 910 (PGLA)', description: 'A popular choice for smooth passage through tissue and predictable absorption.', absorptionProfile: 'Complete absorption in 56-70 days.', color: 'Violet / Undyed', sizes: 'USP 8-0 to 2', image: 'https://picsum.photos/seed/resqcril/400/300', details: 'Resqcril™ is a versatile suture used in a wide range of procedures. Its predictable absorption profile and superior handling make it a favorite among surgeons for soft tissue ligation and approximation.' },
+      { category: ProductCategory.Absorbable, brandName: 'Resqlene™', material: 'Polydioxanone (PDO)', description: 'Monofilament synthetic suture for extended wound support, ideal for orthopedic and facial surgery.', absorptionProfile: 'Extended absorption, complete in 180-210 days.', color: 'Violet', sizes: 'USP 7-0 to 1', image: 'https://picsum.photos/seed/resqlene/400/300', details: 'The extended absorption profile of Resqlene™ makes it ideal for applications requiring prolonged wound support, such as in orthopedic surgery for tendon and ligament repair, and in facial plastic surgery.' },
+      { category: ProductCategory.NonAbsorbable, brandName: 'Resqpro™', material: 'Polypropylene', description: 'Monofilament suture known for its exceptionally smooth surface and high tensile strength, ideal for cardiovascular and plastic surgery.', color: 'Blue', sizes: 'USP 10-0 to 1', image: 'https://picsum.photos/seed/resqpro/400/300', details: 'Resqpro™ is exceptionally inert in tissue and maintains its high tensile strength indefinitely. This makes it the material of choice for cardiovascular anastomoses, hernia repair, and other permanent fixation needs.' },
+      { category: ProductCategory.NonAbsorbable, brandName: 'Resqylon™', material: 'Monofilament Nylon (Polyamide)', description: 'Provides excellent and consistent knot security, primarily used for skin closure.', color: 'Black / Blue', sizes: 'USP 11-0 to 2', image: 'https://picsum.photos/seed/resqylon/400/300', details: 'Known for its elasticity and memory, Resqylon™ allows for secure knotting and is easy to remove. It is widely used in general surgery for skin closure and in ophthalmology.' },
+      { category: ProductCategory.NonAbsorbable, brandName: 'Resqsilk™', material: 'Braided Silk', description: 'A natural, braided suture with excellent handling properties, coated with silicone.', color: 'Black', sizes: 'USP 6-0 to 2', image: 'https://picsum.photos/seed/resqsilk/400/300', details: 'Resqsilk™ offers superb handling and knot-tying characteristics. Though classified as non-absorbable, it gradually loses tensile strength over several months. It is often used in ophthalmology and for securing drains.' },
+      { category: ProductCategory.NonAbsorbable, brandName: 'Resqsteel™', material: '316L Stainless Steel', description: 'Monofilament steel suture for procedures requiring the highest strength, such as orthopedic and sternum closure.', color: 'Metallic', sizes: 'USP 7 to 0', image: 'https://picsum.photos/seed/resqsteel/400/300', details: 'Resqsteel™ offers the ultimate in tensile strength and is completely inert. It is essential for high-stress applications like sternum closure after open-heart surgery, as well as certain orthopedic and neurosurgical procedures.' },
+  ];
+
+  // --- DOM ELEMENTS ---
+  const productGrid = document.getElementById('product-grid');
+  const filterContainer = document.getElementById('filters');
+  const modal = document.getElementById('product-modal');
+  const modalContent = document.getElementById('modal-content');
+  const modalCloseButton = document.getElementById('modal-close-button');
+  const contactForm = document.getElementById('contact-form');
+  const navLinks = document.querySelectorAll('header nav a');
+  const sections = document.querySelectorAll('main > section');
+
+  // --- PRODUCTS PAGE LOGIC ---
+  const createProductCard = (product, index) => {
+    return `
+      <div class="bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 flex flex-col">
+        <img src="${product.image}" alt="${product.brandName}" class="w-full h-48 object-cover" />
+        <div class="p-6 flex flex-col flex-grow">
+          <h3 class="text-xl font-montserrat font-bold text-resqtec-blue">${product.brandName}</h3>
+          <p class="font-semibold text-resqtec-accent mb-2">${product.material}</p>
+          <p class="text-gray-600 mb-4 flex-grow">${product.description}</p>
+          <ul class="text-sm space-y-1 text-gray-800">
+            ${product.absorptionProfile ? `<li><strong>Absorption:</strong> ${product.absorptionProfile}</li>` : ''}
+            <li><strong>Color:</strong> ${product.color}</li>
+            <li><strong>Sizes:</strong> ${product.sizes}</li>
+          </ul>
+          <button 
+            data-product-index="${index}"
+            class="mt-4 w-full bg-resqtec-blue text-white font-semibold py-2 rounded-lg hover:bg-opacity-90 transition-colors"
+          >
+            View Details
+          </button>
+        </div>
+      </div>
+    `;
+  };
+
+  const renderProducts = (filter = 'All') => {
+    const filteredProducts = products.filter(p => filter === 'All' || p.category === filter);
+    productGrid.innerHTML = filteredProducts.map(createProductCard).join('');
+  };
+
+  if (filterContainer) {
+    filterContainer.addEventListener('click', (e) => {
+      if (e.target.tagName === 'BUTTON') {
+        const filter = e.target.dataset.filter;
+        
+        // Update button styles
+        filterContainer.querySelectorAll('button').forEach(btn => {
+          btn.classList.remove('bg-resqtec-accent', 'text-white', 'shadow-md');
+          btn.classList.add('bg-white', 'text-resqtec-blue', 'hover:bg-gray-200');
+        });
+        e.target.classList.add('bg-resqtec-accent', 'text-white', 'shadow-md');
+        e.target.classList.remove('bg-white', 'text-resqtec-blue', 'hover:bg-gray-200');
+
+        renderProducts(filter);
+      }
+    });
+  }
+
+  // --- MODAL LOGIC ---
+  const openModal = (productIndex) => {
+    const product = products[productIndex];
+    if (!product) return;
+
+    document.getElementById('modal-image').src = product.image;
+    document.getElementById('modal-image').alt = product.brandName;
+    document.getElementById('product-modal-title').textContent = product.brandName;
+    document.getElementById('modal-material').textContent = product.material;
+    document.getElementById('modal-description').textContent = product.description;
+    document.getElementById('modal-details').textContent = product.details || '';
+    
+    const absorptionItem = document.getElementById('modal-absorption-item');
+    if (product.absorptionProfile) {
+      document.getElementById('modal-absorption').textContent = product.absorptionProfile;
+      absorptionItem.classList.remove('hidden');
+    } else {
+      absorptionItem.classList.add('hidden');
+    }
+    
+    document.getElementById('modal-color').textContent = product.color;
+    document.getElementById('modal-sizes').textContent = product.sizes;
+    
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeModal = () => {
+    modal.classList.add('hidden');
+    document.body.style.overflow = 'auto';
+  };
+
+  if (productGrid) {
+    productGrid.addEventListener('click', (e) => {
+      const button = e.target.closest('[data-product-index]');
+      if (button) {
+        openModal(button.dataset.productIndex);
+      }
+    });
+  }
+
+  if (modal) {
+    modal.addEventListener('click', closeModal);
+  }
+  if(modalContent) {
+    modalContent.addEventListener('click', (e) => e.stopPropagation());
+  }
+  if(modalCloseButton) {
+     modalCloseButton.addEventListener('click', closeModal);
+  }
+
+  // --- CONTACT FORM LOGIC ---
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thank you for your inquiry! We will get back to you soon.');
+      contactForm.reset();
+    });
+  }
+  
+  // --- NAVIGATION LOGIC ---
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.4
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        navLinks.forEach(link => {
+          link.classList.toggle('text-resqtec-accent', link.getAttribute('data-navlink') === id);
+          link.classList.toggle('text-resqtec-blue', link.getAttribute('data-navlink') !== id);
+        });
+      }
+    });
+  }, observerOptions);
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+
+
+  // --- INITIAL RENDER ---
+  if (productGrid) {
+    renderProducts();
+  }
+
+});
+</script>
+<script type="module" src="/index.tsx"></script>
 </body>
 </html>
