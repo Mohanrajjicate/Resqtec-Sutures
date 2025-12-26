@@ -14,13 +14,16 @@ export interface Product {
   brand: string;
   category: SutureCategory;
   type: string;
+  modality: 'Monofilament' | 'Braided' | 'Twisted' | 'Barbed';
   color: string;
   absorptionTime?: string;
+  tensileRetention?: string;
   description: string;
   usp: string[];
-  useCase?: string;
+  indications: string[];
   specs: ProductSpecification[];
-  themeColor: string; // Tailwind class
+  themeColor: string; // Tailwind color key
+  imageUrl: string;
 }
 
 export interface NavItem {
